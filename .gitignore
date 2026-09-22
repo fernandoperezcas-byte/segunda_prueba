@@ -1,1 +1,21 @@
+# Entorno Virtual local
 .venv/
+
+# Variables de entorno y credenciales secretas
+.env
+.env.*
+!.env.example
+
+# Configuración personal del editor de código
+.vscode/
+.idea/
+
+# Archivos temporales de Python (Caché de compilación)
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Reportes de pruebas y cobertura (Para tu carpeta tests/)
+.pytest_cache/
+.coverage
+htmlcov/
