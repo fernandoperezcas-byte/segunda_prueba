@@ -16,7 +16,9 @@ dependencies = [
     "fastapi (>=0.141.1,<0.142.0)",
     "uvicorn (>=0.53.0,<0.54.0)",
     "prometheus-fastapi-instrumentator (>=8.1.0,<9.0.0)",
-    "notebook (>=7.6.3,<8.0.0)"
+    "notebook (>=7.6.3,<8.0.0)",
+    "matplotlib (>=3.11.2,<4.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)"
 ]
 
 [tool.poetry]
