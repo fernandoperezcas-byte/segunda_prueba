@@ -8,7 +8,15 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "python-dotenv (>=1.2.3,<2.0.0)"
+    "python-dotenv (>=1.2.3,<2.0.0)",
+    "pandas (>=3.0.6,<4.0.0)",
+    "numpy (>=2.5.3,<3.0.0)",
+    "scikit-learn (>=1.9.1,<2.0.0)",
+    "mlflow (>=3.16.1,<4.0.0)",
+    "fastapi (>=0.141.1,<0.142.0)",
+    "uvicorn (>=0.53.0,<0.54.0)",
+    "prometheus-fastapi-instrumentator (>=8.1.0,<9.0.0)",
+    "notebook (>=7.6.3,<8.0.0)"
 ]
 
 [tool.poetry]
