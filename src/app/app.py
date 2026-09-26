@@ -13,7 +13,7 @@ st.write("Mueve los controles inferiores para estimar el valor de una propiedad 
 
 # 1. Definir la URL de tu API de FastAPI
 # (Cuando usemos Docker, esta URL cambiará al nombre del contenedor)
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = "http://api:8000/predict"
 
 st.sidebar.header("📍 Ubicación del Bloque")
 latitude = st.sidebar.slider("Latitud", 32.5, 42.5, 34.05, step=0.01)

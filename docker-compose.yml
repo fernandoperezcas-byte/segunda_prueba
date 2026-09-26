@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  # Servicio 1: El Backend (FastAPI)
+  api:
+    build:
+      context: .
+      dockerfile: src/api/dockerfile
+    container_name: california_api
+    ports:
+      - "8000:8000"
+    working_dir: /app
+    volumes:
+      - ./mlruns:/app/mlruns  # Comparte la carpeta local de MLflow con el contenedor
+    networks:
+      - housing_network
+
+  # Servicio 2: El Frontend (Streamlit)
+  app:
+    build:
+      context: .
+      dockerfile: src/app/dockerfile
+    container_name: california_app
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api     # Asegura que la API encienda primero
+    networks:
+      - housing_network
+
+# Red interna para que los contenedores se comuniquen
+networks:
+  housing_network:
+    driver: bridge
