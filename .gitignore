@@ -19,3 +19,7 @@
 .pytest_cache/
 .coverage
 htmlcov/
+
+# MLflow local logs and database
+mlruns/
+mlflow.db
