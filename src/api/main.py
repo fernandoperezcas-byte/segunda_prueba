@@ -1,6 +1,7 @@
 import mlflow.sklearn
 import pandas as pd
 from fastapi import FastAPI, HTTPException
+from prometheus_fastapi_instrumentator import Instrumentator
 from src.api.schemas import HousingInput
 
 app = FastAPI(
@@ -8,6 +9,8 @@ app = FastAPI(
     description="API modular para predecir el precio de casas en California usando el mejor modelo de MLflow.",
     version="1.0"
 )
+
+Instrumentator().instrument(app).expose(app)
 
 # Ruta global del modelo en el Model Registry
 MODEL_URI = "/app/mlruns/1/models/m-7cd79cea290b400e9aa77a76b68e3dbd/artifacts"

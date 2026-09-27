@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 5s # Tiempo de recolección (rápido para pruebas locales)
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: "fastapi-monitoring"
+    metrics_path: "/metrics"
+    static_configs:
+      # Usamos el nombre del servicio 'api' y el puerto interno del contenedor 8000
+      - targets: ["api:8000"]
