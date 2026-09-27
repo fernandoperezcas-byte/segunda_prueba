@@ -10,7 +10,7 @@ app = FastAPI(
 )
 
 # Ruta global del modelo en el Model Registry
-MODEL_URI = "mlruns/1/5bc41d30a4b04ec2b85f08c6d163df54/artifacts/model"
+MODEL_URI = "/app/mlruns/1/models/m-7cd79cea290b400e9aa77a76b68e3dbd/artifacts"
 
 try:
     print(f"Cargando el pipeline desde el Model Registry ({MODEL_URI})...")
